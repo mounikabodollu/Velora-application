@@ -4,6 +4,8 @@
 
 VELORA is a modern, premium, fully responsive luxury fashion and lifestyle e-commerce web application crafted with vanilla **HTML5**, **CSS3**, and **JavaScript**. Designed with high-fashion editorial aesthetics, it embodies the restrained elegance of contemporary European and Indian luxury maisons.
 
+<!-- Version: Updated VELORA website collections and design -->
+
 ---
 
 ## ✦ Brand Aesthetics & Palette
