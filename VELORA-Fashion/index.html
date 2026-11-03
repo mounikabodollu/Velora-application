@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VELORA – Luxury Fashion & Lifestyle Maison. Discover thoughtful pieces and effortless silhouettes crafted with artisanal precision.">
+  <meta name="keywords" content="VELORA, luxury fashion, designer clothing, women fashion, men tailoring, leather accessories, slow fashion, sustainable fashion">
+  <meta name="theme-color" content="#111111">
+  <title>VELORA – Fashion & Lifestyle | Style That Speaks</title>
+
+  <!-- Google Fonts: Playfair Display & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="VELORA Home">
+        <span class="logo-text">VELORA</span>
+        <span class="logo-tag">ATELIER</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#products" class="nav-link">New Arrivals</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Action Icons (Search, Wishlist, Cart, Mobile Toggle) -->
+      <div class="nav-actions">
+        <!-- Search Trigger -->
+        <button class="nav-icon-btn open-search-btn" aria-label="Open Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <!-- Wishlist Drawer Trigger -->
+        <button class="nav-icon-btn open-wishlist-btn" aria-label="View Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="nav-badge wishlist-badge" id="navWishlistBadge">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button class="nav-icon-btn open-cart-btn" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+            <path d="M3 6h18"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="nav-badge cart-badge" id="navCartBadge">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link active">Home</a>
+      <a href="#collections" class="mobile-nav-link">Collections</a>
+      <a href="#products" class="mobile-nav-link">New Arrivals</a>
+      <a href="#lookbook" class="mobile-nav-link">Lookbook</a>
+      <a href="#about" class="mobile-nav-link">About Maison</a>
+      <a href="#contact" class="mobile-nav-link">Contact Concierge</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <button class="btn btn-outline-white btn-sm open-search-btn" style="width: 100%; margin-bottom: 1rem;">
+        Search Catalog
+      </button>
+      <div class="mobile-socials">
+        <a href="#footer" aria-label="Instagram">Instagram</a>
+        <a href="#footer" aria-label="Pinterest">Pinterest</a>
+        <a href="#footer" aria-label="Editorial">Editorial</a>
+      </div>
+    </div>
+  </aside>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=85" 
+          alt="VELORA Luxury Editorial Campaign" 
+          class="hero-bg-image"
+        >
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <span class="hero-season-tag">
+          <span>●</span> Autumn / Winter 2026-27 Collection
+        </span>
+        <h1 class="hero-title">Wear Your Own Story.</h1>
+        <p class="hero-subtitle">Thoughtful Pieces. Effortless Silhouettes.</p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn btn-primary btn-lg">Explore Collection</a>
+          <a href="#lookbook" class="btn btn-outline-white btn-lg">View Lookbook</a>
+        </div>
+      </div>
+
+      <!-- Scroll-down indicator -->
+      <a href="#intro" class="hero-scroll-indicator" aria-label="Scroll to introduction">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         Introduction Section
+         ========================================================================== -->
+    <section class="section intro-section" id="intro">
+      <div class="container intro-content reveal-on-scroll">
+        <div class="intro-quote-mark">“</div>
+        <span class="subheading">The VELORA Philosophy</span>
+        <h2 class="intro-heading">
+          Style is not about having more. It's about choosing well.
+        </h2>
+        <p class="intro-text">
+          Founded on the conviction that clothing should be an enduring dialogue between architectural structure and effortless comfort, VELORA creates modern heirlooms. Every silhouette is conceived with patience, tailored from traceable natural fibers, and destined to outlive fleeting seasonal trends.
+        </p>
+
+        <!-- 3 Brand Pillars -->
+        <div class="brand-pillars">
+          <div class="pillar-item">
+            <span class="pillar-number">I.</span>
+            <h3 class="pillar-title">Artisanal Craft</h3>
+            <p class="pillar-desc">
+              Every seam, horn button, and lining is hand-finished in small European and Indian ateliers committed to generational mastery.
+            </p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-number">II.</span>
+            <h3 class="pillar-title">Considered Simplicity</h3>
+            <p class="pillar-desc">
+              Stripping away unnecessary embellishments to celebrate architectural lines, fluid drapes, and impeccable tactile proportions.
+            </p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-number">III.</span>
+            <h3 class="pillar-title">Conscious Longevity</h3>
+            <p class="pillar-desc">
+              100% certified organic cashmere, mulberry silk, and deadstock virgin wools crafted to age beautifully over decades.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Collections Section
+         ========================================================================== -->
+    <section class="section collections-section" id="collections">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="subheading">Curated Lines</span>
+          <h2 class="heading-lg">Signature Collections</h2>
+          <p>Explore thoughtfully tailored wardrobes engineered for modern life. Select any category to view its curated sub-departments.</p>
+        </div>
+
+        <!-- 3 Main Category Cards -->
+        <div class="collections-grid">
+          <!-- Women Collection Card -->
+          <article class="collection-card reveal-on-scroll delay-1" data-category="women" id="cardWomen">
+            <img 
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" 
+              alt="VELORA Women's Collection" 
+              class="collection-card-img"
+              loading="lazy"
+            >
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <span class="collection-tag">Atelier Line • 01</span>
+              <h3 class="collection-title">Women's Collection</h3>
+              <p class="collection-desc">
+                Refined silhouettes, architectural drapery, and contemporary essentials crafted from pure Mulberry silk, virgin wool, and organic cotton.
+              </p>
+              <p class="collection-count">8 Curated Sub-Departments</p>
+              <button class="collection-btn" aria-label="Explore Women's Collection">
+                Explore Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Men Collection Card -->
+          <article class="collection-card reveal-on-scroll delay-2" data-category="men" id="cardMen">
+            <img 
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80" 
+              alt="VELORA Men's Collection" 
+              class="collection-card-img"
+              loading="lazy"
+            >
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <span class="collection-tag">Sartorial Line • 02</span>
+              <h3 class="collection-title">Men's Collection</h3>
+              <p class="collection-desc">
+                Considered cuts, relaxed luxury cashmere knits, and full-canvassed suiting engineered for effortless sartorial distinction.
+              </p>
+              <p class="collection-count">8 Curated Sub-Departments</p>
+              <button class="collection-btn" aria-label="Explore Men's Collection">
+                Explore Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Accessories Collection Card -->
+          <article class="collection-card reveal-on-scroll delay-3" data-category="accessories" id="cardAccessories">
+            <img 
+              src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80" 
+              alt="VELORA Accessories Collection" 
+              class="collection-card-img"
+              loading="lazy"
+            >
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <span class="collection-tag">Objects & Leather • 03</span>
+              <h3 class="collection-title">Accessories Collection</h3>
+              <p class="collection-desc">
+                Sculptural Italian leather handbags, minimalist watches, and 18k micro-plated jewelry crafted to elevate daily rituals.
+              </p>
+              <p class="collection-count">8 Curated Sub-Departments</p>
+              <button class="collection-btn" aria-label="Explore Accessories Collection">
+                Explore Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sub-Collections Explorer -->
+        <div class="subcollections-wrapper reveal-on-scroll" id="subCollectionsArea">
+          <div class="subcollections-header">
+            <div class="subcollections-header-content">
+              <span class="subheading" id="subcollectionsSubtitle">Curated Departments</span>
+              <h3 class="heading-md" id="subcollectionsTitle">Explore Sub-Collections</h3>
+              <p id="subcollectionsDesc">
+                Click any category above or use the filter tabs below to navigate through our 24 specialized departments.
+              </p>
+            </div>
+
+            <!-- Category Filter Tabs with 'All Collections' Option -->
+            <div class="subcollections-tabs" role="tablist" aria-label="Sub-collections filter">
+              <button class="subcollections-tab-btn active" data-subfilter="all" role="tab" aria-selected="true">
+                All Collections (24)
+              </button>
+              <button class="subcollections-tab-btn" data-subfilter="women" role="tab" aria-selected="false">
+                Women's (8)
+              </button>
+              <button class="subcollections-tab-btn" data-subfilter="men" role="tab" aria-selected="false">
+                Men's (8)
+              </button>
+              <button class="subcollections-tab-btn" data-subfilter="accessories" role="tab" aria-selected="false">
+                Accessories (8)
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Sub-Collections Grid (3 cols desktop, 2 cols tablet, 1 col mobile) -->
+          <div class="subcollections-grid" id="subCollectionsGrid" aria-live="polite">
+            <!-- Injected by script.js with all 24 sub-collections -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         New Arrivals / Products Section
+         ========================================================================== -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="subheading">Curated Essentials</span>
+          <h2 class="heading-lg">New Arrivals & Icons</h2>
+          <p>Hand-crafted pieces engineered with uncompromising attention to form, fabric, and fit.</p>
+        </div>
+
+        <!-- Controls: Filters, Live Search, and Sorting -->
+        <div class="products-controls reveal-on-scroll">
+          <!-- Category Tabs -->
+          <div class="category-tabs" role="tablist">
+            <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">All Pieces</button>
+            <button class="tab-btn" data-category="women" role="tab" aria-selected="false">Women</button>
+            <button class="tab-btn" data-category="men" role="tab" aria-selected="false">Men</button>
+            <button class="tab-btn" data-category="accessories" role="tab" aria-selected="false">Accessories</button>
+          </div>
+
+          <!-- Secondary Actions: Search & Sort -->
+          <div class="products-filter-actions">
+            <!-- Inline Live Search -->
+            <div class="search-input-wrapper">
+              <svg class="search-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" id="productSearchInput" placeholder="Filter garments..." aria-label="Search garments">
+              <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">✕</button>
+            </div>
+
+            <!-- Sort By Dropdown -->
+            <div class="sort-select-wrapper">
+              <select id="sortSelect" aria-label="Sort products">
+                <option value="featured">Sort: Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Dynamic Grid -->
+        <div class="products-grid" id="productsGrid" aria-live="polite">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Campaign Section
+         ========================================================================== -->
+    <section class="campaign-section" id="campaign">
+      <div class="campaign-bg-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1920&q=85" 
+          alt="VELORA Campaign - Made to Be Lived In" 
+          class="campaign-bg-image"
+          loading="lazy"
+        >
+        <div class="campaign-overlay"></div>
+      </div>
+
+      <div class="container campaign-content reveal-on-scroll">
+        <span class="campaign-tag">Editorial Campaign 2026</span>
+        <h2 class="campaign-title">Made to Be Lived In.</h2>
+        <p class="campaign-text">
+          Real luxury doesn't belong in glass cases. Our silhouettes are cut to move with grace through morning strolls, boardrooms, intimate dinner salons, and spontaneous weekend departures.
+        </p>
+        <div class="campaign-actions">
+          <a href="#about" class="btn btn-gold btn-lg">Discover Our Story</a>
+          <a href="#products" class="btn btn-outline-white btn-lg">Shop The Edit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Lookbook Section (Asymmetrical Editorial Gallery & Lightbox)
+         ========================================================================== -->
+    <section class="section lookbook-section" id="lookbook">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="subheading">Visual Diary</span>
+          <h2 class="heading-lg">Editorial Lookbook</h2>
+          <p>A photographic study in light, shadow, texture, and relaxed luxury. Click any image to view details.</p>
+        </div>
+
+        <!-- 6 Image Editorial Layout -->
+        <div class="lookbook-grid">
+          <!-- Look 1 -->
+          <div class="lookbook-item reveal-on-scroll" data-index="0">
+            <img 
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80" 
+              alt="Look 01 / The Monochromatic Overcoat" 
+              class="lookbook-image"
+              loading="lazy"
+            >
+            <div class="lookbook-overlay">
+              <span class="lookbook-badge">Look 01</span>
+              <div class="lookbook-meta">
+                <div>
+                  <h3 class="lookbook-title">The Monochromatic Overcoat</h3>
+                  <p class="lookbook-subtitle">Autumn / Winter Series</p>
+                </div>
+                <button class="lookbook-zoom-btn" aria-label="Expand image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Look 2 -->
+          <div class="lookbook-item reveal-on-scroll" data-index="1">
+            <img 
+              src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=1000&q=80" 
+              alt="Look 02 / The Camel & Cashmere Harmony" 
+              class="lookbook-image"
+              loading="lazy"
+            >
+            <div class="lookbook-overlay">
+              <span class="lookbook-badge">Look 02</span>
+              <div class="lookbook-meta">
+                <div>
+                  <h3 class="lookbook-title">Camel & Cashmere</h3>
+                  <p class="lookbook-subtitle">Milan Atelier</p>
+                </div>
+                <button class="lookbook-zoom-btn" aria-label="Expand image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Look 3 -->
+          <div class="lookbook-item reveal-on-scroll" data-index="2">
+            <img 
+              src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1000&q=80" 
+              alt="Look 03 / Minimalist Noir Architecture" 
+              class="lookbook-image"
+              loading="lazy"
+            >
+            <div class="lookbook-overlay">
+              <span class="lookbook-badge">Look 03</span>
+              <div class="lookbook-meta">
+                <div>
+                  <h3 class="lookbook-title">Noir Architecture</h3>
+                  <p class="lookbook-subtitle">Parisian Silhouette</p>
+                </div>
+                <button class="lookbook-zoom-btn" aria-label="Expand image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Look 4 -->
+          <div class="lookbook-item reveal-on-scroll" data-index="3">
+            <img 
+              src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=1000&q=80" 
+              alt="Look 04 / Sculpted Leather Accents" 
+              class="lookbook-image"
+              loading="lazy"
+            >
+            <div class="lookbook-overlay">
+              <span class="lookbook-badge">Look 04</span>
+              <div class="lookbook-meta">
+                <div>
+                  <h3 class="lookbook-title">Sculpted Leather</h3>
+                  <p class="lookbook-subtitle">Accessories Study</p>
+                </div>
+                <button class="lookbook-zoom-btn" aria-label="Expand image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Look 5 -->
+          <div class="lookbook-item reveal-on-scroll" data-index="4">
+            <img 
+              src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80" 
+              alt="Look 05 / Fluid Silk Reverie" 
+              class="lookbook-image"
+              loading="lazy"
+            >
+            <div class="lookbook-overlay">
+              <span class="lookbook-badge">Look 05</span>
+              <div class="lookbook-meta">
+                <div>
+                  <h3 class="lookbook-title">Fluid Silk Reverie</h3>
+                  <p class="lookbook-subtitle">Golden Hour Drapes</p>
+                </div>
+                <button class="lookbook-zoom-btn" aria-label="Expand image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Look 6 -->
+          <div class="lookbook-item reveal-on-scroll" data-index="5">
+            <img 
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1400&q=80" 
+              alt="Look 06 / The Modern Tailored Suiting" 
+              class="lookbook-image"
+              loading="lazy"
+            >
+            <div class="lookbook-overlay">
+              <span class="lookbook-badge">Look 06</span>
+              <div class="lookbook-meta">
+                <div>
+                  <h3 class="lookbook-title">Modern Tailored Suiting</h3>
+                  <p class="lookbook-subtitle">Runway Capsule 2026</p>
+                </div>
+                <button class="lookbook-zoom-btn" aria-label="Expand image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About / Brand Story Section
+         ========================================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Image Column -->
+          <div class="about-image-column reveal-on-scroll">
+            <div class="about-image-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" 
+                alt="VELORA Design Atelier & Pattern Cutting" 
+                class="about-main-image"
+                loading="lazy"
+              >
+            </div>
+            <div class="about-floating-card">
+              <h4 class="floating-card-title">Est. 2024 Atelier</h4>
+              <p class="floating-card-sub">Hand-finished patterns & traceable fabric sourcing.</p>
+            </div>
+          </div>
+
+          <!-- Text Column -->
+          <div class="about-text-column reveal-on-scroll delay-1">
+            <span class="subheading">Heritage & Vision</span>
+            <h2 class="about-heading">Quiet Confidence. Considered Design.</h2>
+            <p class="about-narrative">
+              VELORA was created in rejection of ephemeral fashion waste. We craft clothing that honors the wearer’s inner poise—quietly commanding attention through exceptional drape, exquisite fabrics, and architectural precision rather than loud logos.
+            </p>
+
+            <!-- 3 Commitments -->
+            <div class="about-commitments">
+              <div class="commitment-item">
+                <div class="commitment-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <div class="commitment-text">
+                  <h4>100% Traceable Natural Fibers</h4>
+                  <p>Certified Mongolian cashmere, French linen, and GOTS-certified organic cotton.</p>
+                </div>
+              </div>
+
+              <div class="commitment-item">
+                <div class="commitment-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="commitment-text">
+                  <h4>Ethical Atelier Partnerships</h4>
+                  <p>Fair living wages, safe sunlit craft spaces, and zero child labor guarantees.</p>
+                </div>
+              </div>
+
+              <div class="commitment-item">
+                <div class="commitment-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                  </svg>
+                </div>
+                <div class="commitment-text">
+                  <h4>Lifetime Seam Repair Promise</h4>
+                  <p>Complimentary atelier alteration and seam repairs to guarantee lifelong wearability.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-quote-box">
+              “True style whispers; it never needs to shout.”
+              <span class="about-quote-author">— Creative Director, VELORA Maison</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Customer Testimonials Section
+         ========================================================================== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="subheading">Patron Experiences</span>
+          <h2 class="heading-lg">Words From Our Collectors</h2>
+          <p>Read reflections from individuals who have made VELORA part of their daily uniform.</p>
+        </div>
+
+        <!-- Interactive Carousel -->
+        <div class="testimonials-carousel-wrapper reveal-on-scroll">
+          <div class="testimonials-slider" id="testimonialsSlider">
+            <!-- Review 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “The Oversized Wool Trench Coat is hands-down the finest garment I have ever invested in. The drape, the heft of the fabric, and the understated horn buttons feel like savile row bespoke couture.”
+              </blockquote>
+              <div class="testimonial-author-wrapper">
+                <img 
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" 
+                  alt="Aditi Sharma" 
+                  class="author-avatar"
+                  loading="lazy"
+                >
+                <div class="author-info">
+                  <h4 class="author-name">Aditi Sharma</h4>
+                  <span class="author-title">Architectural Designer, Mumbai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “Finding menswear tailoring with this level of restraint and structural integrity is extraordinarily rare. VELORA gets the proportions and lapel stance exactly right.”
+              </blockquote>
+              <div class="testimonial-author-wrapper">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" 
+                  alt="Kabir Mehta" 
+                  class="author-avatar"
+                  loading="lazy"
+                >
+                <div class="author-info">
+                  <h4 class="author-name">Kabir Mehta</h4>
+                  <span class="author-title">Creative Director, New Delhi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “The Mulberry Silk Slip Dress drapes like liquid gold. The stitching is impeccable and it transitions seamlessly from daytime gallery visits to black-tie evening events.”
+              </blockquote>
+              <div class="testimonial-author-wrapper">
+                <img 
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" 
+                  alt="Priya Nair" 
+                  class="author-avatar"
+                  loading="lazy"
+                >
+                <div class="author-info">
+                  <h4 class="author-name">Priya Nair</h4>
+                  <span class="author-title">Art Curator, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “Every detail from the bespoke cloth dustbags to the horn button alignment exudes quiet sophistication. The customer concierge assisted with my sizing perfectly.”
+              </blockquote>
+              <div class="testimonial-author-wrapper">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" 
+                  alt="Rohan Verma" 
+                  class="author-avatar"
+                  loading="lazy"
+                >
+                <div class="author-info">
+                  <h4 class="author-name">Rohan Verma</h4>
+                  <span class="author-title">Tech Entrepreneur, Hyderabad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <div class="testimonial-controls">
+          <button class="testimonial-arrow-btn" id="testimonialPrev" aria-label="Previous Testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m15 18-6-6 6-6"/>
+            </svg>
+          </button>
+          <div class="testimonial-dots">
+            <span class="testimonial-dot active" data-index="0"></span>
+            <span class="testimonial-dot" data-index="1"></span>
+            <span class="testimonial-dot" data-index="2"></span>
+            <span class="testimonial-dot" data-index="3"></span>
+          </div>
+          <button class="testimonial-arrow-btn" id="testimonialNext" aria-label="Next Testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Newsletter Subscription Section
+         ========================================================================== -->
+    <section class="section newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-card reveal-on-scroll">
+          <span class="newsletter-tag">The VELORA Circle</span>
+          <h2 class="newsletter-title">Good Things, In Your Inbox.</h2>
+          <p class="newsletter-desc">
+            Receive private invites to seasonal lookbooks, invitation-only previews, and enjoy 10% off your inaugural order.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <svg class="newsletter-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <input 
+                type="email" 
+                class="newsletter-input" 
+                id="newsletterEmail" 
+                placeholder="Enter your email address..." 
+                required 
+                aria-label="Email address for newsletter"
+              >
+            </div>
+            <button type="submit" class="btn btn-gold newsletter-submit-btn">
+              Subscribe
+            </button>
+          </form>
+          <div class="newsletter-message" id="newsletterMsg" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact & Concierge Section
+         ========================================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="subheading">Client Services</span>
+          <h2 class="heading-lg">Atelier Concierge</h2>
+          <p>Whether you require personalized sizing advice or wish to arrange a private fitting appointment.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Information Column -->
+          <div class="contact-info-column reveal-on-scroll">
+            <div class="concierge-card">
+              <h3>Flagship Ateliers</h3>
+
+              <div class="concierge-item">
+                <div class="concierge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="concierge-label">Mumbai Flagship</span>
+                  <p class="concierge-val">14 Kala Ghoda, Fort, Mumbai 400001</p>
+                </div>
+              </div>
+
+              <div class="concierge-item">
+                <div class="concierge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="concierge-label">Private Styling Inquiries</span>
+                  <p class="concierge-val">concierge@velora-atelier.com</p>
+                </div>
+              </div>
+
+              <div class="concierge-item">
+                <div class="concierge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="concierge-label">Direct Telephone</span>
+                  <p class="concierge-val">+91 (022) 8492-3000 (Mon–Sat, 10am–8pm IST)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="vip-salon-card">
+              <h4>Private VIP Fitting Salon</h4>
+              <p>Reserve an exclusive one-on-one styling session with our creative atelier directors accompanied by champagne.</p>
+              <a href="#contact" class="btn btn-outline-white btn-sm" onclick="document.getElementById('contactSubject').value='styling'; document.getElementById('contactMessage').focus();">
+                Book Private Session
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-column reveal-on-scroll delay-1">
+            <h3>Send a Message</h3>
+            <p>Our client advisors respond within 24 business hours.</p>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Full Name *</label>
+                  <input type="text" id="contactName" class="form-control" placeholder="e.g. Radhika Sen" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email Address *</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="radhika@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Inquiry Topic</label>
+                <select id="contactSubject" class="form-control">
+                  <option value="general">General Client Advisory</option>
+                  <option value="sizing">Garment Sizing & Fit Consultation</option>
+                  <option value="styling">Private VIP Fitting Appointment</option>
+                  <option value="orders">Bespoke Orders & Tracking</option>
+                  <option value="press">Press & Editorial Loan Requests</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message *</label>
+                <textarea id="contactMessage" class="form-control" placeholder="Please detail your request or preferred fitting dates..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">VELORA</a>
+          <span class="footer-tagline">Style That Speaks.</span>
+          <p class="footer-desc">
+            A luxury fashion house dedicated to architectural silhouettes, artisanal craft, and timeless ease. Designed for those who value quiet distinction.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/><circle cx="12" cy="12" r="10"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 1: Explore -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#products" class="footer-link">New Arrivals</a></li>
+            <li><a href="#collections" class="footer-link">Women's Atelier</a></li>
+            <li><a href="#collections" class="footer-link">Men's Collection</a></li>
+            <li><a href="#collections" class="footer-link">Leather Accessories</a></li>
+            <li><a href="#lookbook" class="footer-link">Lookbook 2026</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Client Care -->
+        <div class="footer-col">
+          <h4>Client Care</h4>
+          <ul class="footer-links">
+            <li><a href="#contact" class="footer-link">Private Styling</a></li>
+            <li><a href="#contact" class="footer-link">Size & Fit Guide</a></li>
+            <li><a href="#contact" class="footer-link">Complimentary Shipping</a></li>
+            <li><a href="#contact" class="footer-link">Returns & Exchanges</a></li>
+            <li><a href="#contact" class="footer-link">Atelier Seam Repair</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: The Maison -->
+        <div class="footer-col">
+          <h4>The Maison</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">Our Heritage</a></li>
+            <li><a href="#about" class="footer-link">Conscious Materials</a></li>
+            <li><a href="#campaign" class="footer-link">Campaign 2026</a></li>
+            <li><a href="#testimonials" class="footer-link">Patron Reviews</a></li>
+            <li><a href="#contact" class="footer-link">Press Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 VELORA Atelier Inc. All rights reserved. Crafted with timeless precision.</p>
+        <div class="footer-payment-badges">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">RUPAY</span>
+          <span class="payment-badge">UPI</span>
+          <span class="payment-badge">APPLE PAY</span>
+        </div>
+        <a href="#home" class="back-to-top-link" id="footerBackToTop">
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Slide-Out Drawers & Modals
+       ========================================================================== -->
+
+  <!-- Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- Shopping Bag Drawer -->
+  <aside class="slide-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <h3>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        Shopping Bag <span id="cartCountText">(0)</span>
+      </h3>
+      <button class="drawer-close-btn close-drawer-btn" aria-label="Close Bag">✕</button>
+    </div>
+
+    <!-- Free Shipping Meter -->
+    <div class="shipping-meter">
+      <div id="shippingMeterText">Complimentary express shipping on orders over ₹5,000</div>
+      <div class="shipping-meter-bar">
+        <div class="shipping-meter-fill" id="shippingMeterFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Bag Items Body -->
+    <div class="drawer-body" id="cartDrawerBody">
+      <!-- Items dynamically injected -->
+    </div>
+
+    <!-- Bag Summary & Checkout Footer -->
+    <div class="drawer-footer" id="cartDrawerFooter">
+      <div class="promo-box">
+        <input type="text" id="promoInput" class="promo-input" placeholder="Promo code (e.g. VELORA10)">
+        <button class="btn btn-outline btn-sm" id="applyPromoBtn">Apply</button>
+      </div>
+
+      <div class="drawer-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="drawer-summary-row" id="cartDiscountRow" style="display: none; color: #2E7D4E;">
+        <span>Special Privilege Discount</span>
+        <span id="cartDiscount">-₹0</span>
+      </div>
+      <div class="drawer-summary-row">
+        <span>Express Delivery</span>
+        <span style="color: #2E7D4E; font-weight: 600;">Complimentary</span>
+      </div>
+      <div class="drawer-summary-total">
+        <span>Estimated Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+
+      <button class="btn btn-primary drawer-checkout-btn" id="openCheckoutBtn">
+        Proceed to Checkout →
+      </button>
+    </div>
+  </aside>
+
+  <!-- Wishlist Drawer -->
+  <aside class="slide-drawer" id="wishlistDrawer" aria-label="Wishlist">
+    <div class="drawer-header">
+      <h3>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+        Saved Pieces <span id="wishlistCountText">(0)</span>
+      </h3>
+      <button class="drawer-close-btn close-drawer-btn" aria-label="Close Wishlist">✕</button>
+    </div>
+
+    <div class="drawer-body" id="wishlistDrawerBody">
+      <!-- Saved items dynamically injected -->
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="quickview-modal" id="quickviewModal" role="dialog" aria-modal="true" aria-label="Product Quick View">
+    <div class="quickview-dialog" id="quickviewDialog">
+      <!-- Populated dynamically by script.js -->
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search Catalog">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <input type="text" class="search-modal-input" id="searchModalInput" placeholder="Type to search garments, fabrics, coats...">
+        <button class="search-modal-close" id="closeSearchBtn" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-modal-results" id="searchModalResults">
+        <!-- Results injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Lookbook Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Lookbook Lightbox">
+    <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close lightbox">✕</button>
+    <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" aria-label="Previous look">❮</button>
+    <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" aria-label="Next look">❯</button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-img-wrapper">
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      </div>
+      <div class="lightbox-caption-bar">
+        <h4 class="lightbox-title" id="lightboxTitle"></h4>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Demo Modal -->
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout">
+    <div class="checkout-dialog">
+      <button class="quickview-close" id="closeCheckoutBtn" aria-label="Close Checkout">✕</button>
+
+      <div class="checkout-notice-banner">
+        <span>ℹ️</span>
+        <div>
+          <strong>Demo Checkout Mode:</strong> No actual payment processing occurs. You can test the full simulated ordering experience safely.
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Secure Checkout</h3>
+      <p style="color: #666; font-size: 0.875rem; margin-bottom: 1.5rem;">Complete your order details below for bespoke atelier dispatch.</p>
+
+      <!-- Order Summary Preview -->
+      <div class="checkout-summary-box">
+        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #7A624A; margin-bottom: 0.75rem;">
+          Order Summary
+        </div>
+        <div id="checkoutItemsList"></div>
+        <div style="display: flex; justify-content: space-between; font-weight: 700; border-top: 1px dashed #ccc; padding-top: 0.75rem; margin-top: 0.5rem;">
+          <span>Total (Taxes & Shipping Included)</span>
+          <span id="checkoutTotal">₹0</span>
+        </div>
+      </div>
+
+      <!-- Checkout Form -->
+      <form id="checkoutForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="shipName">Recipient Name *</label>
+            <input type="text" id="shipName" class="form-control" placeholder="Aditi Sharma" required>
+          </div>
+          <div class="form-group">
+            <label for="shipPhone">Phone Number *</label>
+            <input type="tel" id="shipPhone" class="form-control" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="shipAddress">Delivery Address *</label>
+          <input type="text" id="shipAddress" class="form-control" placeholder="Apartment / Penthouse, Street, Landmark" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="shipCity">City *</label>
+            <input type="text" id="shipCity" class="form-control" placeholder="Mumbai" required>
+          </div>
+          <div class="form-group">
+            <label for="shipPin">Postal PIN Code *</label>
+            <input type="text" id="shipPin" class="form-control" placeholder="400001" required>
+          </div>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">
+          Select Payment Method
+        </label>
+        <div class="payment-methods-grid">
+          <div class="payment-method-card active" data-method="upi">
+            <span>⚡ UPI / QR</span>
+          </div>
+          <div class="payment-method-card" data-method="card">
+            <span>💳 Credit / Debit Card</span>
+          </div>
+          <div class="payment-method-card" data-method="cod">
+            <span>📦 Cash on Delivery</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+          Place Order (Demo Simulation)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="floating-back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Toast Notifications Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
