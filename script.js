@@ -142,6 +142,84 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'A statuesque floor-length masterpiece featuring a one-shoulder drape and a graceful thigh-high slit. Tailored to flow like liquid mercury as you move.',
       fabric: 'Heavy Crepe Matte Silk Blend',
       sizes: ['XS', 'S', 'M', 'L']
+    },
+    {
+      id: 'velora-11',
+      title: 'Sartorial Double-Faced Cashmere Coat',
+      category: 'men',
+      price: 18999,
+      badge: 'New Arrival',
+      rating: 4.9,
+      reviewsCount: 24,
+      image: 'https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=800&q=80',
+      description: 'Hand-stitched in Florence from double-faced Mongolian cashmere. Features horn buttons, unlined minimalist construction, and an effortless drop shoulder.',
+      fabric: '100% Hand-Faced Grade-A Cashmere',
+      sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+      id: 'velora-12',
+      title: 'Pleated Silk-Georgette Column Skirt',
+      category: 'women',
+      price: 8499,
+      badge: 'New Arrival',
+      rating: 4.8,
+      reviewsCount: 19,
+      image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=800&q=80',
+      description: 'Micro-pleated Mulberry silk georgette with an elasticized grosgrain waistband and subtle asymmetric hem that dances as you walk.',
+      fabric: '100% Pure Mulberry Silk Georgette',
+      sizes: ['XS', 'S', 'M', 'L']
+    },
+    {
+      id: 'velora-13',
+      title: 'Minimalist Automatic Skeleton Watch',
+      category: 'accessories',
+      price: 15400,
+      badge: 'New Arrival',
+      rating: 5.0,
+      reviewsCount: 45,
+      image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
+      description: '40mm sandblasted titanium casing with exhibition caseback, sapphire crystal glass, and Italian bridle leather strap. Powered by Swiss movement.',
+      fabric: 'Aerospace Titanium & Italian Bridle Leather',
+      sizes: ['One Size']
+    },
+    {
+      id: 'velora-14',
+      title: 'Heavyweight Raw Selvedge Denim Overshirt',
+      category: 'men',
+      price: 7999,
+      badge: 'New Arrival',
+      rating: 4.8,
+      reviewsCount: 27,
+      image: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80',
+      description: 'Woven on shuttle looms in Okayama using 14oz rope-dyed indigo organic cotton. Features selvedge ID on internal placket and copper shank buttons.',
+      fabric: '100% Organic Okayama Selvedge Denim',
+      sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+      id: 'velora-15',
+      title: 'Sculptural Acetate Cat-Eye Sunglasses',
+      category: 'accessories',
+      price: 6499,
+      badge: 'New Arrival',
+      rating: 4.9,
+      reviewsCount: 36,
+      image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80',
+      description: 'Handcrafted from bevelled Japanese Mazzucchelli acetate with CR-39 anti-reflective lenses offering 100% UV400 solar protection.',
+      fabric: 'Mazzucchelli Acetate & Carl Zeiss Lenses',
+      sizes: ['One Size']
+    },
+    {
+      id: 'velora-16',
+      title: 'Artisanal Hand-Woven Linen Co-ord Set',
+      category: 'women',
+      price: 11500,
+      badge: 'New Arrival',
+      rating: 4.9,
+      reviewsCount: 22,
+      image: 'https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?auto=format&fit=crop&w=800&q=80',
+      description: 'A harmonious two-piece silhouette comprising an asymmetrical tunic and wide-leg trousers, woven from crisp Normandy flax linen.',
+      fabric: '100% Certified Normandy Flax Linen',
+      sizes: ['XS', 'S', 'M', 'L']
     }
   ];
 
@@ -424,6 +502,18 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLookbookIndex: 0
   };
 
+  // URL query parameter support (e.g. ?category=men or ?category=women)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('category');
+    if (catParam && ['all', 'women', 'men', 'accessories'].includes(catParam.toLowerCase())) {
+      state.activeFilter = catParam.toLowerCase();
+      state.subCollectionFilter = catParam.toLowerCase();
+    }
+  } catch (err) {
+    // ignore
+  }
+
   function saveCart() {
     localStorage.setItem('velora_cart', JSON.stringify(state.cart));
     updateCartBadges();
@@ -521,17 +611,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll effect on navbar
   function handleNavbarScroll() {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    if (navbar) {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     }
 
     // Toggle Back to Top Button
-    if (window.scrollY > 400) {
-      backToTopBtn.classList.add('visible');
-    } else {
-      backToTopBtn.classList.remove('visible');
+    if (backToTopBtn) {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
     }
   }
 
@@ -540,55 +634,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ScrollSpy with IntersectionObserver
   const sections = document.querySelectorAll('section[id], header[id]');
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -70% 0px',
-    threshold: 0
-  };
+  if (sections.length > 0 && 'IntersectionObserver' in window) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
 
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach((link) => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
-      }
-    });
-  }, observerOptions);
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach((link) => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else if (link.getAttribute('href')?.startsWith('#')) {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
 
-  sections.forEach((section) => navObserver.observe(section));
+    sections.forEach((section) => navObserver.observe(section));
+  }
 
   // Mobile Navigation Toggle
   function openMobileNav() {
-    hamburgerBtn.classList.add('active');
-    hamburgerBtn.setAttribute('aria-expanded', 'true');
-    mobileNav.classList.add('open');
-    navBackdrop.classList.add('active');
+    if (hamburgerBtn) {
+      hamburgerBtn.classList.add('active');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+    if (mobileNav) mobileNav.classList.add('open');
+    if (navBackdrop) navBackdrop.classList.add('active');
     document.body.classList.add('modal-open');
   }
 
   function closeMobileNav() {
-    hamburgerBtn.classList.remove('active');
-    hamburgerBtn.setAttribute('aria-expanded', 'false');
-    mobileNav.classList.remove('open');
-    navBackdrop.classList.remove('active');
+    if (hamburgerBtn) {
+      hamburgerBtn.classList.remove('active');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+    if (mobileNav) mobileNav.classList.remove('open');
+    if (navBackdrop) navBackdrop.classList.remove('active');
     document.body.classList.remove('modal-open');
   }
 
-  hamburgerBtn.addEventListener('click', () => {
-    if (mobileNav.classList.contains('open')) {
-      closeMobileNav();
-    } else {
-      openMobileNav();
-    }
-  });
+  if (hamburgerBtn && mobileNav) {
+    hamburgerBtn.addEventListener('click', () => {
+      if (mobileNav.classList.contains('open')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+  }
 
-  navBackdrop.addEventListener('click', closeMobileNav);
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMobileNav);
+  }
 
   // Close mobile nav after clicking any link
   document.querySelectorAll('.mobile-nav-link').forEach((link) => {
@@ -707,10 +811,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderProducts() {
+    const gridEl = document.getElementById('productsGrid') || document.getElementById('newArrivalsGrid');
+    if (!gridEl) return;
+
     const filtered = getFilteredProducts();
 
     if (filtered.length === 0) {
-      productsGrid.innerHTML = `
+      gridEl.innerHTML = `
         <div class="empty-products-state">
           <h3>No garments match your search</h3>
           <p>We couldn't find any piece matching "${state.searchQuery}". Try selecting another category or clear your search term.</p>
@@ -722,8 +829,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resetBtn.addEventListener('click', () => {
           state.activeFilter = 'all';
           state.searchQuery = '';
-          productSearchInput.value = '';
-          searchClearBtn.classList.remove('visible');
+          if (productSearchInput) productSearchInput.value = '';
+          if (searchClearBtn) searchClearBtn.classList.remove('visible');
           categoryTabBtns.forEach((btn) => {
             btn.classList.toggle('active', btn.dataset.category === 'all');
           });
@@ -733,7 +840,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    productsGrid.innerHTML = filtered
+    gridEl.innerHTML = filtered
       .map((product) => {
         const isWishlisted = state.wishlist.includes(product.id);
         const badgeClass =
@@ -773,12 +880,14 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .join('');
 
-    attachProductCardEvents();
+    attachProductCardEvents(gridEl);
   }
 
-  function attachProductCardEvents() {
+  function attachProductCardEvents(gridEl) {
+    if (!gridEl) return;
+
     // Wishlist Buttons
-    productsGrid.querySelectorAll('.btn-wishlist').forEach((btn) => {
+    gridEl.querySelectorAll('.btn-wishlist').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         const id = btn.dataset.productId;
@@ -787,7 +896,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Quick View Buttons
-    productsGrid.querySelectorAll('.btn-quick-view').forEach((btn) => {
+    gridEl.querySelectorAll('.btn-quick-view').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         const id = btn.dataset.productId;
@@ -796,7 +905,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add to Cart Buttons
-    productsGrid.querySelectorAll('.btn-add-to-cart').forEach((btn) => {
+    gridEl.querySelectorAll('.btn-add-to-cart').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         const id = btn.dataset.productId;
@@ -835,40 +944,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Search input live filtering
-  productSearchInput.addEventListener('input', (e) => {
-    state.searchQuery = e.target.value;
-    if (state.searchQuery.trim().length > 0) {
-      searchClearBtn.classList.add('visible');
-    } else {
-      searchClearBtn.classList.remove('visible');
-    }
-    renderProducts();
-  });
+  if (productSearchInput) {
+    productSearchInput.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value;
+      if (searchClearBtn) {
+        if (state.searchQuery.trim().length > 0) {
+          searchClearBtn.classList.add('visible');
+        } else {
+          searchClearBtn.classList.remove('visible');
+        }
+      }
+      renderProducts();
+    });
+  }
 
-  searchClearBtn.addEventListener('click', () => {
-    productSearchInput.value = '';
-    state.searchQuery = '';
-    searchClearBtn.classList.remove('visible');
-    renderProducts();
-    productSearchInput.focus();
-  });
+  if (searchClearBtn && productSearchInput) {
+    searchClearBtn.addEventListener('click', () => {
+      productSearchInput.value = '';
+      state.searchQuery = '';
+      searchClearBtn.classList.remove('visible');
+      renderProducts();
+      productSearchInput.focus();
+    });
+  }
 
   // Sort dropdown
-  sortSelect.addEventListener('change', (e) => {
-    state.sortBy = e.target.value;
-    renderProducts();
-  });
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      state.sortBy = e.target.value;
+      renderProducts();
+    });
+  }
 
-  // Collections Cards Click: filters sub-collections & smoothly scrolls to sub-collections grid
+  // Collections Cards Click: filters sub-collections & smoothly scrolls or navigates
   document.querySelectorAll('.collection-card').forEach((card) => {
     card.addEventListener('click', () => {
       const category = card.dataset.category;
+      if (category === 'new-arrivals') {
+        window.location.href = 'new-arrivals.html';
+        return;
+      }
       if (category) {
         state.subCollectionFilter = category;
         renderSubCollections();
         const subArea = document.getElementById('subCollectionsArea');
         if (subArea) {
           subArea.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.location.href = `collections.html?category=${category}#subCollectionsArea`;
         }
       }
     });
@@ -967,9 +1090,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         renderProducts();
         showToast(`Opening ${title} Collection`, 'info');
-        const productsSection = document.getElementById('products');
+        const productsSection = document.getElementById('products') || document.getElementById('newArrivalsGrid');
         if (productsSection) {
           productsSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.location.href = `new-arrivals.html?category=${category}`;
         }
       });
     });
@@ -1245,31 +1370,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Drawer Toggle Helpers
   function openCartDrawer() {
     closeAllDrawers();
-    cartDrawer.classList.add('open');
-    drawerBackdrop.classList.add('active');
+    if (cartDrawer) cartDrawer.classList.add('open');
+    if (drawerBackdrop) drawerBackdrop.classList.add('active');
     document.body.classList.add('modal-open');
     renderCartDrawer();
   }
 
   function openWishlistDrawer() {
     closeAllDrawers();
-    wishlistDrawer.classList.add('open');
-    drawerBackdrop.classList.add('active');
+    if (wishlistDrawer) wishlistDrawer.classList.add('open');
+    if (drawerBackdrop) drawerBackdrop.classList.add('active');
     document.body.classList.add('modal-open');
     renderWishlistDrawer();
   }
 
   function closeAllDrawers() {
-    cartDrawer.classList.remove('open');
-    wishlistDrawer.classList.remove('open');
-    drawerBackdrop.classList.remove('active');
+    if (cartDrawer) cartDrawer.classList.remove('open');
+    if (wishlistDrawer) wishlistDrawer.classList.remove('open');
+    if (drawerBackdrop) drawerBackdrop.classList.remove('active');
     document.body.classList.remove('modal-open');
   }
 
   openCartBtns.forEach((btn) => btn.addEventListener('click', openCartDrawer));
   openWishlistBtns.forEach((btn) => btn.addEventListener('click', openWishlistDrawer));
   closeDrawerBtns.forEach((btn) => btn.addEventListener('click', closeAllDrawers));
-  drawerBackdrop.addEventListener('click', closeAllDrawers);
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeAllDrawers);
 
   /* ==========================================================================
      10. Quick View Modal
@@ -1363,34 +1488,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close button
-    document.getElementById('dialogCloseBtn').addEventListener('click', closeQuickView);
+    const dialogCloseBtn = document.getElementById('dialogCloseBtn');
+    if (dialogCloseBtn) dialogCloseBtn.addEventListener('click', closeQuickView);
 
-    quickviewModal.classList.add('active');
-    document.body.classList.add('modal-open');
+    if (quickviewModal) {
+      quickviewModal.classList.add('active');
+      document.body.classList.add('modal-open');
+    }
   }
 
   function closeQuickView() {
-    quickviewModal.classList.remove('active');
+    if (quickviewModal) quickviewModal.classList.remove('active');
     document.body.classList.remove('modal-open');
   }
 
-  quickviewModal.addEventListener('click', (e) => {
-    if (e.target === quickviewModal) closeQuickView();
-  });
+  if (quickviewModal) {
+    quickviewModal.addEventListener('click', (e) => {
+      if (e.target === quickviewModal) closeQuickView();
+    });
+  }
 
   /* ==========================================================================
      11. Search Overlay Modal
      ========================================================================== */
 
   function openSearchModal() {
+    if (!searchModal) return;
     searchModal.classList.add('active');
     document.body.classList.add('modal-open');
-    searchModalInput.value = '';
-    searchModalInput.focus();
+    if (searchModalInput) {
+      searchModalInput.value = '';
+      searchModalInput.focus();
+    }
     renderSearchModalResults('');
   }
 
   function closeSearchModal() {
+    if (!searchModal) return;
     searchModal.classList.remove('active');
     document.body.classList.remove('modal-open');
   }
@@ -1447,15 +1581,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  searchModalInput.addEventListener('input', (e) => {
-    renderSearchModalResults(e.target.value);
-  });
+  if (searchModalInput) {
+    searchModalInput.addEventListener('input', (e) => {
+      renderSearchModalResults(e.target.value);
+    });
+  }
 
   /* ==========================================================================
      12. Lookbook Lightbox Modal
      ========================================================================== */
 
   function openLightbox(index) {
+    if (!lightboxModal) return;
     state.currentLookbookIndex = index;
     updateLightboxContent();
     lightboxModal.classList.add('active');
@@ -1466,14 +1603,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const item = LOOKBOOK_ITEMS[state.currentLookbookIndex];
     if (!item) return;
 
-    lightboxImg.src = item.image;
-    lightboxImg.alt = item.title;
-    lightboxTitle.textContent = item.title;
-    lightboxDesc.textContent = `${item.subtitle} • ${item.description}`;
+    if (lightboxImg) {
+      lightboxImg.src = item.image;
+      lightboxImg.alt = item.title;
+    }
+    if (lightboxTitle) lightboxTitle.textContent = item.title;
+    if (lightboxDesc) lightboxDesc.textContent = `${item.subtitle} • ${item.description}`;
   }
 
   function closeLightbox() {
-    lightboxModal.classList.remove('active');
+    if (lightboxModal) lightboxModal.classList.remove('active');
     document.body.classList.remove('modal-open');
   }
 
@@ -1496,9 +1635,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (lightboxNextBtn) lightboxNextBtn.addEventListener('click', nextLightbox);
   if (lightboxPrevBtn) lightboxPrevBtn.addEventListener('click', prevLightbox);
 
-  lightboxModal.addEventListener('click', (e) => {
-    if (e.target === lightboxModal) closeLightbox();
-  });
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+  }
 
   // Global Keyboard Shortcuts (Esc to close, Arrow keys for lightbox)
   document.addEventListener('keydown', (e) => {
@@ -1509,7 +1650,7 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
       closeCheckoutModal();
       closeMobileNav();
-    } else if (lightboxModal.classList.contains('active')) {
+    } else if (lightboxModal && lightboxModal.classList.contains('active')) {
       if (e.key === 'ArrowRight') nextLightbox();
       if (e.key === 'ArrowLeft') prevLightbox();
     }
@@ -1582,12 +1723,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     closeAllDrawers();
     renderCheckoutSummary();
-    checkoutModal.classList.add('active');
-    document.body.classList.add('modal-open');
+    if (checkoutModal) {
+      checkoutModal.classList.add('active');
+      document.body.classList.add('modal-open');
+    }
   }
 
   function closeCheckoutModal() {
-    checkoutModal.classList.remove('active');
+    if (checkoutModal) checkoutModal.classList.remove('active');
     document.body.classList.remove('modal-open');
   }
 
@@ -1611,15 +1754,17 @@ document.addEventListener('DOMContentLoaded', () => {
       )
       .join('');
 
-    checkoutTotal.textContent = formatINR(finalTotal);
+    if (checkoutTotal) checkoutTotal.textContent = formatINR(finalTotal);
   }
 
   if (openCheckoutBtn) openCheckoutBtn.addEventListener('click', openCheckoutModal);
   if (closeCheckoutBtn) closeCheckoutBtn.addEventListener('click', closeCheckoutModal);
 
-  checkoutModal.addEventListener('click', (e) => {
-    if (e.target === checkoutModal) closeCheckoutModal();
-  });
+  if (checkoutModal) {
+    checkoutModal.addEventListener('click', (e) => {
+      if (e.target === checkoutModal) closeCheckoutModal();
+    });
+  }
 
   // Payment method selection
   const paymentCards = document.querySelectorAll('.payment-method-card');
@@ -1727,19 +1872,31 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
 
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
-  const revealObserver = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  revealElements.forEach((el) => revealObserver.observe(el));
+    revealElements.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealElements.forEach((el) => el.classList.add('in-view'));
+  }
+
+  // Safe immediate reveal for all visible or top-level elements to ensure zero blank beige screen
+  revealElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 1.5 || el.closest('.collections-section') || el.closest('.page-hero')) {
+      el.classList.add('in-view');
+    }
+  });
 
   /* ==========================================================================
      18. Initialize Catalog & Drawers

@@ -827,6 +827,90 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
+/* --- Page Hero & Breadcrumb Styles --- */
+.page-hero {
+  position: relative;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: clamp(7rem, 12vw, 9.5rem) 0 clamp(3.5rem, 6vw, 5rem);
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.28;
+  filter: grayscale(15%);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(17, 17, 17, 0.45) 0%, rgba(17, 17, 17, 0.95) 100%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.25rem;
+}
+
+.breadcrumb-nav a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-nav a:hover {
+  color: var(--color-gold);
+}
+
+.breadcrumb-separator {
+  color: var(--color-gold);
+  font-size: 0.65rem;
+}
+
+.breadcrumb-current {
+  color: var(--color-gold-light);
+  font-weight: 600;
+}
+
+.page-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.page-hero-desc {
+  font-size: clamp(0.9375rem, 1.8vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 660px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
 /* --- Collections Section --- */
 .collections-section {
   background-color: var(--color-beige);
@@ -835,13 +919,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .collections-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 1.8vw, 1.75rem);
 }
 
 .collection-card {
   position: relative;
-  height: clamp(480px, 60vh, 620px);
+  height: clamp(460px, 58vh, 600px);
   border-radius: var(--radius-sm);
   overflow: hidden;
   cursor: pointer;
@@ -872,8 +956,8 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(
     180deg,
     rgba(17, 17, 17, 0.1) 0%,
-    rgba(17, 17, 17, 0.35) 50%,
-    rgba(17, 17, 17, 0.88) 100%
+    rgba(17, 17, 17, 0.4) 50%,
+    rgba(17, 17, 17, 0.9) 100%
   );
   transition: background var(--transition-smooth);
 }
@@ -882,8 +966,8 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(
     180deg,
     rgba(17, 17, 17, 0.2) 0%,
-    rgba(17, 17, 17, 0.5) 50%,
-    rgba(17, 17, 17, 0.92) 100%
+    rgba(17, 17, 17, 0.55) 50%,
+    rgba(17, 17, 17, 0.94) 100%
   );
 }
 
@@ -892,12 +976,12 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 2.25rem 2rem;
+  padding: clamp(1.5rem, 2.5vw, 2.25rem) clamp(1.25rem, 2vw, 1.75rem);
   color: var(--color-white);
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 0.5rem;
 }
 
 .collection-tag {
@@ -910,15 +994,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .collection-title {
   color: var(--color-white);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 1.875rem);
   font-weight: 400;
   letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.collection-desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .collection-count {
   font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .collection-btn {
@@ -3277,12 +3373,28 @@ textarea.form-control {
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 
+/* Safe Fallback: Prevent any blank screen or empty beige screen */
+.collections-section .reveal-on-scroll,
+.collections-section .collection-card,
+.collections-section .subcollections-wrapper,
+.collections-page .reveal-on-scroll,
+.new-arrivals-page .reveal-on-scroll,
+.page-hero .reveal-on-scroll,
+.products-section .reveal-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
 
-/* Laptop: 1024px - 1366px */
+/* Laptop: 1024px - 1200px */
 @media (max-width: 1200px) {
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -3303,7 +3415,7 @@ textarea.form-control {
   }
 
   .collections-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .subcollections-grid {

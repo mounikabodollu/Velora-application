@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Arrivals — VELORA ATELIER | Autumn / Winter Runway Drop</title>
+  <meta name="description" content="Explore VELORA's latest runway and atelier releases: luxury men's fashion, women's couture tailoring, and Italian leather accessories.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Playfair Display (headings) & DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="new-arrivals-page">
+  <!-- Skip link for keyboard accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="VELORA Home">
+        <span class="logo-text">VELORA</span>
+        <span class="logo-tag">ATELIER</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="new-arrivals.html" class="nav-link active">New Arrivals</a>
+        <a href="index.html#lookbook" class="nav-link">Lookbook</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Action Icons (Search, Wishlist, Cart, Mobile Toggle) -->
+      <div class="nav-actions">
+        <!-- Search Trigger -->
+        <button class="nav-icon-btn open-search-btn" aria-label="Open Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <!-- Wishlist Drawer Trigger -->
+        <button class="nav-icon-btn open-wishlist-btn" aria-label="View Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="nav-badge wishlist-badge" id="navWishlistBadge">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button class="nav-icon-btn open-cart-btn" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+            <path d="M3 6h18"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="nav-badge cart-badge" id="navCartBadge">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="collections.html" class="mobile-nav-link">Collections</a>
+      <a href="new-arrivals.html" class="mobile-nav-link active">New Arrivals</a>
+      <a href="index.html#lookbook" class="mobile-nav-link">Lookbook</a>
+      <a href="index.html#about" class="mobile-nav-link">About Maison</a>
+      <a href="index.html#contact" class="mobile-nav-link">Contact Concierge</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <button class="btn btn-outline-white btn-sm open-search-btn" style="width: 100%; margin-bottom: 1rem;">
+        Search Catalog
+      </button>
+      <div class="mobile-socials">
+        <a href="#footer" aria-label="Instagram">Instagram</a>
+        <a href="#footer" aria-label="Pinterest">Pinterest</a>
+        <a href="#footer" aria-label="Editorial">Editorial</a>
+      </div>
+    </div>
+  </aside>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         Page Hero & Breadcrumbs
+         ========================================================================== -->
+    <section class="page-hero">
+      <img 
+        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=85" 
+        alt="VELORA New Arrivals Runway Hero" 
+        class="page-hero-bg"
+      >
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="collections.html">Collections</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">New Arrivals</span>
+        </nav>
+        <span class="hero-season-tag">Autumn / Winter Runway Drop</span>
+        <h1 class="page-hero-title">New Arrivals & Icons</h1>
+        <p class="page-hero-desc">
+          Impeccably tailored from traceable natural fibers: explore the latest menswear cuts, fluid silk womenswear, and sculptural Tuscan leather accessories.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         New Arrivals / Product Section
+         ========================================================================== -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <!-- Controls: Filters, Live Search, and Sorting -->
+        <div class="products-controls reveal-on-scroll">
+          <!-- Category Tabs -->
+          <div class="category-tabs" role="tablist" aria-label="New Arrivals category filter">
+            <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">All Pieces</button>
+            <button class="tab-btn" data-category="men" role="tab" aria-selected="false">Men's Fashion</button>
+            <button class="tab-btn" data-category="women" role="tab" aria-selected="false">Women's Fashion</button>
+            <button class="tab-btn" data-category="accessories" role="tab" aria-selected="false">Accessories</button>
+          </div>
+
+          <!-- Secondary Actions: Search & Sort -->
+          <div class="products-filter-actions">
+            <!-- Inline Live Search -->
+            <div class="search-input-wrapper">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="search-icon">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search new garments..." 
+                aria-label="Filter products live by name or fabric"
+                autocomplete="off"
+              >
+              <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search input">×</button>
+            </div>
+
+            <!-- Sort By Selector -->
+            <div class="sort-wrapper">
+              <label for="sortSelect" class="sr-only">Sort by</label>
+              <select id="sortSelect" class="sort-select">
+                <option value="featured">Featured Drop</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name-asc">Alphabetical</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid (Rendered Dynamically via script.js) -->
+        <div class="products-grid" id="productsGrid" aria-live="polite">
+          <!-- Injected by script.js with latest items -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Atelier Commitments & Craftsmanship
+         ========================================================================== -->
+    <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--color-gray-200);">
+      <div class="container">
+        <div class="brand-pillars">
+          <div class="pillar-item">
+            <span class="pillar-number">I.</span>
+            <h3 class="pillar-title">Traceable Fibers</h3>
+            <p class="pillar-desc">
+              Every drop is ethically spun from certified Mongolian cashmere, French linen, and pure Mulberry silk with full supply chain transparency.
+            </p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-number">II.</span>
+            <h3 class="pillar-title">Complimentary Courier</h3>
+            <p class="pillar-desc">
+              Enjoy carbon-neutral priority express shipping across India on all orders over ₹5,000, dispatched in recyclable linen packaging.
+            </p>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-number">III.</span>
+            <h3 class="pillar-title">Atelier Guarantee</h3>
+            <p class="pillar-desc">
+              Every creation includes complimentary tailoring consultation and 30-day effortless doorstep returns and exchanges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Shopping Cart Drawer
+       ========================================================================== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Shopping Bag <span class="cart-count-text" id="cartCountText">(0)</span></span>
+      </div>
+      <button class="drawer-close-btn close-drawer-btn" aria-label="Close Shopping Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Meter -->
+    <div class="shipping-meter-wrapper">
+      <div class="shipping-meter-text" id="shippingMeterText">
+        Complimentary express shipping on orders over <strong>₹5,000</strong>
+      </div>
+      <div class="shipping-meter-bar">
+        <div class="shipping-meter-fill" id="shippingMeterFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Dynamic Cart Items Container -->
+    <div class="drawer-body" id="cartDrawerBody">
+      <!-- Injected via script.js -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="drawer-footer" id="cartDrawerFooter">
+      <!-- Promo code input -->
+      <div class="promo-box">
+        <input type="text" placeholder="Promo code (e.g. VELORA10)" id="promoInput" class="promo-input">
+        <button class="btn btn-secondary btn-sm" id="applyPromoBtn">Apply</button>
+      </div>
+
+      <div class="cart-totals">
+        <div class="cart-totals-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div class="cart-totals-row discount-row" id="cartDiscountRow" style="display: none;">
+          <span>Voucher Discount</span>
+          <span id="cartDiscount">-₹0</span>
+        </div>
+        <div class="cart-totals-row">
+          <span>Shipping</span>
+          <span id="cartShipping">Complimentary</span>
+        </div>
+        <div class="cart-totals-row total-row">
+          <span>Estimated Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary checkout-btn" id="openCheckoutBtn">
+        Proceed to Checkout
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        </svg>
+      </button>
+
+      <p class="drawer-disclaimer">
+        <span>🔒</span> Complimentary carbon-neutral express shipping & 30-day atelier returns.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Wishlist Drawer
+       ========================================================================== -->
+  <aside class="wishlist-drawer" id="wishlistDrawer" aria-label="Saved Wishlist">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+        <span>Saved Pieces <span class="wishlist-count-text" id="wishlistCountText">(0)</span></span>
+      </div>
+      <button class="drawer-close-btn close-drawer-btn" aria-label="Close Wishlist">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Wishlist Items -->
+    <div class="drawer-body" id="wishlistDrawerBody">
+      <!-- Injected via script.js -->
+    </div>
+  </aside>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- ==========================================================================
+       Quick View Modal
+       ========================================================================== -->
+  <div class="quickview-modal" id="quickviewModal" role="dialog" aria-modal="true" aria-label="Product Details">
+    <div class="quickview-dialog" id="quickviewDialog">
+      <!-- Populated dynamically via script.js -->
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Search Overlay Modal
+       ========================================================================== -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search Catalog">
+    <div class="search-modal-dialog">
+      <div class="search-modal-header">
+        <div class="search-modal-input-wrapper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="searchModalInput" placeholder="Search by garment, silhouette, or department..." autocomplete="off">
+        </div>
+        <button class="search-modal-close" id="closeSearchBtn" aria-label="Close search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="search-modal-results" id="searchModalResults">
+        <!-- Rendered by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Checkout Modal (Demo Mode)
+       ========================================================================== -->
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Simulated Checkout">
+    <div class="checkout-dialog">
+      <div class="checkout-header">
+        <div class="checkout-title">
+          <span>VELORA ATELIER</span>
+          <h3>Secure Checkout Simulation</h3>
+        </div>
+        <button class="checkout-close" id="closeCheckoutBtn" aria-label="Close checkout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="checkout-banner">
+        <span>ℹ️</span>
+        <p><strong>Demo Mode Active:</strong> This is a portfolio preview checkout. No actual charges will be incurred.</p>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form">
+        <div class="checkout-section-title">Shipping Concierge</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="chkFirstNameNew">First Name</label>
+            <input type="text" id="chkFirstNameNew" required placeholder="Elena">
+          </div>
+          <div class="form-group">
+            <label for="chkLastNameNew">Last Name</label>
+            <input type="text" id="chkLastNameNew" required placeholder="Vane">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="chkEmailNew">Email Address</label>
+          <input type="email" id="chkEmailNew" required placeholder="elena.vane@atelier.com">
+        </div>
+
+        <div class="form-group">
+          <label for="chkAddressNew">Delivery Address</label>
+          <input type="text" id="chkAddressNew" required placeholder="Penthouse 4B, Nariman Point">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="chkCityNew">City</label>
+            <input type="text" id="chkCityNew" required placeholder="Mumbai">
+          </div>
+          <div class="form-group">
+            <label for="chkPinNew">PIN / Postal Code</label>
+            <input type="text" id="chkPinNew" required placeholder="400021">
+          </div>
+        </div>
+
+        <div class="checkout-section-title" style="margin-top: 1.5rem;">Select Payment Mode</div>
+        <div class="payment-methods-grid">
+          <div class="payment-method-card active" data-method="upi">
+            <div class="method-icon">⚡</div>
+            <div class="method-name">UPI / QR Code</div>
+            <div class="method-desc">Instant verification via GPay / PhonePe</div>
+          </div>
+          <div class="payment-method-card" data-method="card">
+            <div class="method-icon">💳</div>
+            <div class="method-name">Luxury Card Concierge</div>
+            <div class="method-desc">Visa Infinite / Mastercard World Elite</div>
+          </div>
+        </div>
+
+        <div class="checkout-summary-box">
+          <div class="checkout-items-list" id="checkoutItemsList">
+            <!-- Dynamically populated -->
+          </div>
+          <div class="checkout-summary-row total">
+            <span>Total Payable:</span>
+            <span id="checkoutTotal">₹0</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary checkout-submit-btn">
+          Confirm Simulated Order
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="floating-back-to-top" id="backToTopBtn" aria-label="Back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-top-grid">
+        <!-- Brand Summary -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="brand-logo footer-logo" aria-label="VELORA Home">
+            <span class="logo-text">VELORA</span>
+            <span class="logo-tag">ATELIER</span>
+          </a>
+          <p class="footer-tagline">
+            "Style That Speaks."
+          </p>
+          <p class="footer-bio">
+            Conceived as an architectural dialogue between restraint and sensual tactility. Designed in Milan, tailored with generational artisans in India & Portugal.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/><circle cx="12" cy="12" r="10"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Collections Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Collections</h4>
+          <ul class="footer-nav-list">
+            <li><a href="collections.html?category=women">Women's Atelier</a></li>
+            <li><a href="collections.html?category=men">Men's Sartorial</a></li>
+            <li><a href="collections.html?category=accessories">Objects & Leather</a></li>
+            <li><a href="new-arrivals.html">New Arrivals Drop</a></li>
+            <li><a href="index.html#lookbook">Runway Lookbook</a></li>
+          </ul>
+        </div>
+
+        <!-- Atelier Concierge Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Atelier Concierge</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#contact">Private Appointments</a></li>
+            <li><a href="index.html#about">Our Generational Story</a></li>
+            <li><a href="#footer">Complimentary Shipping & Returns</a></li>
+            <li><a href="#footer">Garment Care & Traceability</a></li>
+            <li><a href="#footer">Sustainability Audit</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-heading">The Atelier Gazette</h4>
+          <p class="footer-newsletter-text">
+            Receive private capsule invitations, architectural editorial previews, and exclusive seasonal drops.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="newsletter-input-wrap">
+              <input 
+                type="email" 
+                class="newsletter-input" 
+                id="newsletterEmail"
+                placeholder="Enter your email address" 
+                required
+                aria-label="Email address for newsletter"
+              >
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <div class="newsletter-message" id="newsletterMsg" role="status"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 VELORA ATELIER MAISON. All Rights Reserved. Engineered with intentional luxury.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#footer">Privacy Statement</a>
+          <a href="#footer">Terms of Service</a>
+          <a href="#footer">Traceability Certificate</a>
+          <button class="footer-back-to-top" id="footerBackToTop">Return to Top ↑</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Core JavaScript Module -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

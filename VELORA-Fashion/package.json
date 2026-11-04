@@ -1,0 +1,24 @@
+{
+  "name": "velora-fashion",
+  "version": "1.0.0",
+  "description": "VELORA – Fashion & Lifestyle luxury web application",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "velora",
+    "fashion",
+    "luxury",
+    "e-commerce",
+    "editorial"
+  ],
+  "author": "VELORA Atelier",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

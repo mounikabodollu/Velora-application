@@ -35,8 +35,8 @@
       <!-- Desktop Navigation Menu -->
       <nav class="nav-menu" aria-label="Main Navigation">
         <a href="#home" class="nav-link active">Home</a>
-        <a href="#collections" class="nav-link">Collections</a>
-        <a href="#products" class="nav-link">New Arrivals</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
         <a href="#lookbook" class="nav-link">Lookbook</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
@@ -84,8 +84,8 @@
   <aside class="mobile-nav" id="mobileNav">
     <div class="mobile-nav-links">
       <a href="#home" class="mobile-nav-link active">Home</a>
-      <a href="#collections" class="mobile-nav-link">Collections</a>
-      <a href="#products" class="mobile-nav-link">New Arrivals</a>
+      <a href="collections.html" class="mobile-nav-link">Collections</a>
+      <a href="new-arrivals.html" class="mobile-nav-link">New Arrivals</a>
       <a href="#lookbook" class="mobile-nav-link">Lookbook</a>
       <a href="#about" class="mobile-nav-link">About Maison</a>
       <a href="#contact" class="mobile-nav-link">Contact Concierge</a>
@@ -190,35 +190,10 @@
           <p>Explore thoughtfully tailored wardrobes engineered for modern life. Select any category to view its curated sub-departments.</p>
         </div>
 
-        <!-- 3 Main Category Cards -->
+        <!-- 4 Main Category Cards -->
         <div class="collections-grid">
-          <!-- Women Collection Card -->
-          <article class="collection-card reveal-on-scroll delay-1" data-category="women" id="cardWomen">
-            <img 
-              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" 
-              alt="VELORA Women's Collection" 
-              class="collection-card-img"
-              loading="lazy"
-            >
-            <div class="collection-card-overlay"></div>
-            <div class="collection-card-content">
-              <span class="collection-tag">Atelier Line • 01</span>
-              <h3 class="collection-title">Women's Collection</h3>
-              <p class="collection-desc">
-                Refined silhouettes, architectural drapery, and contemporary essentials crafted from pure Mulberry silk, virgin wool, and organic cotton.
-              </p>
-              <p class="collection-count">8 Curated Sub-Departments</p>
-              <button class="collection-btn" aria-label="Explore Women's Collection">
-                Explore Collection
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </button>
-            </div>
-          </article>
-
           <!-- Men Collection Card -->
-          <article class="collection-card reveal-on-scroll delay-2" data-category="men" id="cardMen">
+          <article class="collection-card reveal-on-scroll delay-1" data-category="men" id="cardMen">
             <img 
               src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80" 
               alt="VELORA Men's Collection" 
@@ -227,13 +202,38 @@
             >
             <div class="collection-card-overlay"></div>
             <div class="collection-card-content">
-              <span class="collection-tag">Sartorial Line • 02</span>
+              <span class="collection-tag">Sartorial Line • 01</span>
               <h3 class="collection-title">Men's Collection</h3>
               <p class="collection-desc">
                 Considered cuts, relaxed luxury cashmere knits, and full-canvassed suiting engineered for effortless sartorial distinction.
               </p>
               <p class="collection-count">8 Curated Sub-Departments</p>
               <button class="collection-btn" aria-label="Explore Men's Collection">
+                Explore Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Women Collection Card -->
+          <article class="collection-card reveal-on-scroll delay-2" data-category="women" id="cardWomen">
+            <img 
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" 
+              alt="VELORA Women's Collection" 
+              class="collection-card-img"
+              loading="lazy"
+            >
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <span class="collection-tag">Atelier Line • 02</span>
+              <h3 class="collection-title">Women's Collection</h3>
+              <p class="collection-desc">
+                Refined silhouettes, architectural drapery, and contemporary essentials crafted from pure Mulberry silk, virgin wool, and organic cotton.
+              </p>
+              <p class="collection-count">8 Curated Sub-Departments</p>
+              <button class="collection-btn" aria-label="Explore Women's Collection">
                 Explore Collection
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -264,6 +264,31 @@
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>
               </button>
+            </div>
+          </article>
+
+          <!-- New Arrivals Collection Card -->
+          <article class="collection-card reveal-on-scroll delay-4" data-category="new-arrivals" id="cardNewArrivals">
+            <img 
+              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80" 
+              alt="VELORA New Arrivals" 
+              class="collection-card-img"
+              loading="lazy"
+            >
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <span class="collection-tag">Autumn / Winter Drop • 04</span>
+              <h3 class="collection-title">New Arrivals</h3>
+              <p class="collection-desc">
+                Freshly debuted runway releases and atelier silhouettes crafted from rare, traceable materials.
+              </p>
+              <p class="collection-count">Latest Runway & Atelier Drops</p>
+              <a href="new-arrivals.html" class="collection-btn" aria-label="Explore New Arrivals Collection">
+                Explore Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </a>
             </div>
           </article>
         </div>
@@ -1170,6 +1195,6 @@
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
   <!-- Core JavaScript -->
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
